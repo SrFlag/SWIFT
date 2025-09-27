@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - Swift</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="chatbot.css">
+    </head>
+<body class="layout-main bg-light">
+    <header class="site-header">
+        </header>
+
+    <main class="main-content-wrapper">
+        <div class="container profile-layout">
+            <aside class="profile-sidebar">
+                <div class="user-info-card">
+                    <div class="user-avatar">👤</div>
+                    <div class="user-details"><strong>FULANO</strong><small>Configurações da Conta</small></div>
+                </div>
+                <nav class="profile-nav">
+                    <a href="#" class="profile-nav-link active"><span>👤</span> Dados da Conta</a>
+                    <a href="#" class="profile-nav-link"><span>📍</span> Endereços</a>
+                    <a href="#" class="profile-nav-link"><span>💳</span> Meus Cartões</a>
+                    <a href="#" class="profile-nav-link"><span>🛡️</span> Privacidade</a>
+                    <a href="#" class="profile-nav-link"><span>📦</span> Pedidos</a>
+                    <a href="home.html" class="profile-nav-link"><span>→</span> Sair</a>
+                </nav>
+            </aside>
+            <section class="profile-content">
+                <h2 class="profile-title"><span>👤</span> Configurações da Conta</h2>
+                <div class="profile-grid">
+                    <div class="main-settings">
+                        <div class="setting-item"><div class="item-content"><label>Nome</label><p>Fulano Silva de Almeida</p></div><button class="edit-btn">✏️</button></div>
+                        <div class="setting-item"><div class="item-content"><label>Email</label><p>fulano@email.com</p></div><button class="edit-btn">✏️</button></div>
+                        <div class="setting-item"><div class="item-content"><label>CPF</label><p>123.456.789-10</p></div><button class="edit-btn">✏️</button></div>
+                        <div class="setting-item"><div class="item-content"><label>Telefone</label><p>(11) 91234-5678</p></div><button class="edit-btn">✏️</button></div>
+                        <div class="setting-item"><div class="item-content"><label>Data de nascimento</label><p>01/01/2000</p></div><button class="edit-btn">✏️</button></div>
+                    </div>
+                    <aside class="privacy-settings">
+                        <p class="privacy-text">Você como titular do dado, nos autoriza seu nome completo; CPF; etc...</p>
+                        <div class="privacy-options">
+                            <label class="checkbox-container"> Li e aceito a <a href="#">Política de Privacidade</a><input type="checkbox" checked="checked"><span class="checkmark"></span></label>
+                            <label class="checkbox-container"> Aceito participar do programa <a href="#">Sócio Swift</a><input type="checkbox" checked="checked"><span class="checkmark"></span></label>
+                            <label class="checkbox-container"> Quero receber comunicações<input type="checkbox"><span class="checkmark"></span></label>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid"></div>
+    </footer>
+
+    <button class="chatbot-fab" id="openChatbotBtn" title="Abrir Suporte"><span>💬</span></button>
+    <div class="chatbot-overlay" id="chatbotOverlay"></div>
+    <div class="side-panel-overlay" id="cartOverlay"></div>
+    <div class="modal-overlay" id="addressModalOverlay"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
