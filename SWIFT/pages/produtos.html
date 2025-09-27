@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Swift</title>
+    <link rel="stylesheet" href="global.css">
+    </head>
+<body class="layout-main">
+    <header class="site-header">
+        </header>
+    <nav class="main-navigation">
+        </nav>
+
+    <main class="main-content-wrapper">
+        <div class="container main-layout">
+            <aside class="filter-sidebar">
+                <div class="filter-group">
+                    <h3>☰ ORDENAR</h3>
+                    <div class="filter-options">
+                        <a href="#" class="filter-option">Menor Preço</a>
+                        <a href="#" class="filter-option active">Maior Preço</a>
+                        <a href="#" class="filter-option">Mais Vendidos</a>
+                        <a href="#" class="filter-option">Ordem Alfabética</a>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>CATEGORIAS</h3>
+                    <h4>BOVINOS <small>187 resultados</small></h4>
+                    <div class="filter-options">
+                        <a href="#" class="filter-option">ACÉM (2) <span></span></a>
+                        <a href="#" class="filter-option">ALCATRA (7) <span></span></a>
+                        </div>
+                </div>
+                <div class="filter-group">
+                    <h3>FORMATOS</h3>
+                    <div class="filter-options">
+                        <a href="#" class="filter-option">CARNE</a>
+                        <a href="#" class="filter-option">BIFES</a>
+                        </div>
+                </div>
+            </aside>
+
+            <div class="main-content">
+                <div class="product-grid">
+                    <div class="product-card">
+                        <a href="produto-detalhe.html" class="product-image-link">
+                            <img src="https://i.imgur.com/uF0B2jM.png" alt="Carne Moída de Patinho Swift 1kg">
+                        </a>
+                        <h3 class="product-name"><a href="produto-detalhe.html">CARNE MOÍDA DE PATINHO SWIFT 1KG</a></h3>
+                        <p class="product-price">R$ 18,90</p>
+                        <div class="product-purchase-controls">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="btn btn-primary add-to-cart-btn">ADICIONAR</button>
+                        </div>
+                    </div>
+                    <div class="product-card">...</div>
+                    <div class="product-card">...</div>
+                </div>
+                <div class="pagination">
+                    <a href="#" class="page-number active">1</a>
+                    <a href="#" class="page-number">2</a>
+                    <a href="#" class="page-number">3</a>
+                    <a href="#" class="page-number">4</a>
+                    <a href="#" class="page-number">5</a>
+                    <a href="#" class="page-number">SEGUINTE ></a>
+                </div>
+            </div>
+        </div>
+        <div class="side-panel-overlay" id="cartOverlay">
+    <div class="side-panel" id="cartPanel">
+        <div class="side-panel-header">
+            <h3><span>🛒</span> MEU CARRINHO</h3>
+            <button class="close-panel-btn" id="closeCartBtn">X</button>
+        </div>
+        <div class="side-panel-body">
+            <div class="empty-cart-message">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+        </div>
+        <div class="side-panel-footer">
+            <div class="cart-totals">
+                <div class="totals-row"><span>Subtotal</span><span>R$ 0,00</span></div>
+                <div class="totals-row"><span>Descontos</span><span>R$ 0,00</span></div>
+                <div class="totals-row total"><span>Total</span><span>R$ 0,00</span></div>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-full-width">FINALIZAR COMPRA</a>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <footer class="site-footer">
+        </footer>
+    </body>
+</html>

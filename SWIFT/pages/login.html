@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Swift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body class="layout-login">
+
+    <aside class="login-sidebar">
+        <div class="logo"><img src="https://www.swift.com.br/arquivos/logo-swift.png" alt="Swift Logo"></div>
+        <section class="info-section">
+            <h3>CANAIS DE VENDA</h3>
+            <p>COMPRE PELO TELEVENDAS <span class="badge">NOVO</span></p>
+            <p class="phone">(11) 4020-6688</p>
+            <p>COMPRE PELO WHATSAPP <span class="badge">NOVO</span></p>
+            <p class="phone">(11) 4020-6688</p>
+            <small>Segunda a Sexta-feira das 7h às 19h.<br>Sábados das 7h às 18h.<br>Feriados das 8h às 18h.</small>
+        </section>
+        <section class="info-section">
+            <h3>SWIFT RESOLVE</h3>
+            <p>RESOLVA PELO CHAT</p>
+            <a href="#">CLIQUE AQUI</a>
+            <small>Fale com nosso atendente virtual</small>
+        </section>
+        <section class="info-section">
+            <h3>FORMAS DE PAGAMENTO</h3>
+            <div class="payment-icons">
+                <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard">
+                <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                <img src="https://img.icons8.com/color/48/elo.png" alt="Elo">
+            </div>
+        </section>
+    </aside>
+
+    <main class="login-main-content">
+        <div class="login-wrapper">
+            <h1 class="login-title">LOGIN</h1>
+            <form class="login-form-box">
+                <div class="form-group">
+                    <label for="email">SEU E-MAIL</label>
+                    <input type="email" id="email" placeholder="Digite o seu e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="password">SENHA</label>
+                    <input type="password" id="password" placeholder="Digite a sua senha">
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Manter-me conectado</label>
+                    </div>
+                    <a href="#" class="forgot-password">Esqueci a senha</a>
+                </div>
+                <div class="form-actions">
+                     <a href="cadastro-pf.html" class="create-account-link">CRIE SUA CONTA AQUI</a>
+                     <button type="submit" class="btn btn-primary">ACESSAR</button>
+                </div>
+            </form>
+            <div class="social-login">
+                <a href="#" class="social-icon"><img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="https://img.icons8.com/ios-filled/50/000000/mac-os.png" alt="Apple"></a>
+                <a href="#" class="social-icon"><img src="https://img.icons8.com/color/48/google-logo.png" alt="Google"></a>
+            </div>
+            <div class="app-download">
+                <h2>BAIXE NOSSO APP</h2>
+                <div class="app-badges">
+                    <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" style="height: 40px;"></a>
+                    <a href="#"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" style="height: 60px;"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="promo-banner">
+        <h2>GARANTA SEU CUPOM DA 1 COMPRA</h2>
+        <div class="coupon">
+            <span>R$</span><span class="amount">20</span><span>OFF</span>
+        </div>
+        <p>USE O CUPOM</p>
+        <div class="coupon-code">CHEGUEI20</div>
+        <p class="terms">PARA COMPRAS A PARTIR DE R$ 149,00</p>
+    </aside>
+
+</body>
+</html>
