@@ -97,3 +97,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// Botão Voltar ao Topo
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopBtn = document.getElementById("backToTop");
+  if (!backToTopBtn) return;
+
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 5 ? "inline" : "none";
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+// MOSTRAR SENHA
+function togglePasswordVisibility() { 
+  var passwordInput = document.getElementById("password");
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
+}
+
+function togglePasswordVisibilityConfirm() {
+  var passwordConfirmInput = document.getElementById("password-confirm");
+  if (passwordConfirmInput.type === "password") {
+    passwordConfirmInput.type = "text";
+  } else {
+    passwordConfirmInput.type = "password";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const enableDarkTheme = document.getElementById("themeToggle");
+
+  const set = (mode) => {
+    document.documentElement.setAttribute("data-theme", mode);
+    localStorage.setItem("theme", mode);
+  };
+
+  // troca o tema ao marcar/desmarcar
+  enableDarkTheme?.addEventListener("change", (enable) => {
+    set(enable.target.checked ? "dark" : "light");
+  });
+
+  // aplica o tema salvo e sincroniza o checkbox
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    set(savedTheme);
+    if (enableDarkTheme) enableDarkTheme.checked = (savedTheme === "dark");
+  }
+});
+

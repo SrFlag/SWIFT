@@ -55,7 +55,7 @@
                                 <input type="text" class="quantity-input" value="1">
                                 <button class="quantity-btn plus">+</button>
                             </div>
-                            <button class="btn btn-primary add-to-cart-btn">ADICIONAR</button>
+                            <button class="btn btn-primary add-to-cart-btn" id="addButton">ADICIONAR</button>
                         </div>
                     </div>
                     <div class="product-card">...</div>
@@ -67,7 +67,7 @@
                     <a href="#" class="page-number">3</a>
                     <a href="#" class="page-number">4</a>
                     <a href="#" class="page-number">5</a>
-                    <a href="#" class="page-number">SEGUINTE ></a>
+                    <a href="#" class="page-number">SEGUINTE></a>
                 </div>
             </div>
         </div>
@@ -81,12 +81,15 @@
             <div class="empty-cart-message">
                 <p>Seu carrinho está vazio.</p>
             </div>
+
+        <!--ADICIONAR ITENS AO CARRINHO-->
+            <div id="cartItems" class="cart-items"></div>
         </div>
         <div class="side-panel-footer">
             <div class="cart-totals">
-                <div class="totals-row"><span>Subtotal</span><span>R$ 0,00</span></div>
-                <div class="totals-row"><span>Descontos</span><span>R$ 0,00</span></div>
-                <div class="totals-row total"><span>Total</span><span>R$ 0,00</span></div>
+                <div class="totals-row"><span>Subtotal</span><span>R$</span><span id="cartSubtotal">0,00</span></div>
+                <div class="totals-row"><span>Descontos</span><span id="cartDiscounts">R$ 0,00</span></div>
+                <div class="totals-row total"><span>Total</span><span>R$</span><span id="cartTotal"> 0,00</span></div>
             </div>
             <a href="checkout.html" class="btn btn-primary btn-full-width">FINALIZAR COMPRA</a>
         </div>
@@ -94,7 +97,7 @@
 </div>
     </main>
 
-    <footer class="site-footer">
-        </footer>
+    <footer class="site-footer"> </footer>
+    <script src="script-produto.js"></script>
     </body>
 </html>

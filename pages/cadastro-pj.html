@@ -21,7 +21,7 @@
 
     <main class="register-main-content">
         <div class="registration-container">
-            <h1 class="form-title">cadastre-se</h1>
+            <h1 class="form-title">Cadastre-se</h1>
             <div class="person-type-toggle">
                 <a href="cadastro-pf.html" class="toggle-option">Pessoa Física</a>
                 <a href="#" class="toggle-option active">Pessoa Jurídica</a>
@@ -48,11 +48,15 @@
                 <div class="form-group full-width">
                     <label for="password">Cadastre uma Senha *</label>
                     <input type="password" id="password" placeholder="Digite aqui...">
-                    <small class="password-hint">A senha deve conter 8+ caracteres...</small>
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">👁
+                    </span>
+                    <small class="password-hint">A senha deve conter 8+ caracteres, incluindo 1 número, 1 maiúscula, 1 minúscula e 1 caractere especial.</small>
                 </div>
                 <div class="form-group full-width">
                     <label for="password-confirm">Repetir Senha*</label>
                     <input type="password" id="password-confirm" placeholder="Digite aqui...">
+                    <span class="toggle-password" onclick="togglePasswordVisibilityConfirm()">👁
+                    </span>
                 </div>
                 <div class="checkbox-section">
                     <div class="checkbox-group">
@@ -72,6 +76,6 @@
         <div class="container footer-grid"> 
              </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
