@@ -302,6 +302,10 @@ body.layout-checkout { background-color: var(--bg-light-gray); }
 .empty-cart-message { text-align: center; margin-top: 50px; color: var(--text-light-gray); }
 .side-panel-footer { padding: 20px; border-top: 1px solid var(--border-color); }
 .cart-totals {padding: 20px 0; border-bottom: 1px solid var(--border-color); margin-bottom: 15px; }
+.discount-footer {margin-bottom: -1.2em; display: flex; justify-content: space-between;}
+.discountButton {font-size: 1em; font-weight: 650; padding: 0.5em 12.5px; border: 1px solid; border-radius: 6px; cursor: pointer;}
+.discountInput {width: 15em; text-align: center; font-weight: bold; border: solid var(--border-color) 2px; border-radius: 10px;}
+
 
 /* --- Modal (Endereço) --- */
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1010; display: flex; align-items: center; justify-content: center; visibility: hidden; opacity: 0; transition: visibility 0.3s, opacity 0.3s; }
@@ -324,29 +328,29 @@ body.layout-checkout { background-color: var(--bg-light-gray); }
 
 /* Botão Voltar ao Topo */
 .backToTopButton {
-  background: none;      /* remove fundo */
-  border: 0;             /* remove borda */
-  color: var(--white);   /* fica branco sobre a top-bar escura */
-  font-size: 1.5em;       /* pode ajustar */
+  background: none;      
+  border: 0;             
+  color: var(--white);   
+  font-size: 1.5em;       
   font-weight: 700;
   cursor: pointer;
-  display: none;         /* só aparece após rolagem (JS) */
+  display: none;        
   z-index: 1001;
 }
 
 .backToTopButton:hover,
 .backToTopButton:focus {
-  text-decoration: underline; /* feedback de interação */
+  text-decoration: underline;
   outline: none;
 }
 
-/* Remova estas regras antigas se existirem */
-.backToTopButtonText { color: inherit; } /* mantém branco sem precisar de <p> interno */
-#backToTop:hover { background-color: transparent; } /* NADA de fundo no hover */
+
+.backToTopButtonText { color: inherit; } 
+#backToTop:hover { background-color: transparent; }
 
 
 .backToTopButtonText {
-    color: var(--white);
+    color: white;
 }
 
 /* --- Overlay e painel --- */
@@ -357,7 +361,7 @@ body.layout-checkout { background-color: var(--bg-light-gray); }
   opacity: 0;
   pointer-events: none;
   transition: opacity .25s ease;
-  z-index: 1200; /* acima do header/top-bar */
+  z-index: 1200; 
 }
 #cartOverlay.active {
   opacity: 1;
@@ -389,7 +393,7 @@ body.layout-checkout { background-color: var(--bg-light-gray); }
   justify-content: space-between;
   gap: 12px;
   padding: 16px;
-  border-bottom: 1px solid var(--border-color, #eee);
+  border-bottom: 1px solid var(--border-color);
 }
 .side-panel-header h3 {
   font-size: 16px;
@@ -401,7 +405,7 @@ body.layout-checkout { background-color: var(--bg-light-gray); }
   font-size: 22px;
   line-height: 1;
   cursor: pointer;
-  color: var(--text-light-gray, #777);
+  color: var(--text-light-gray);
 }
 
 .side-panel-body {
@@ -411,17 +415,17 @@ body.layout-checkout { background-color: var(--bg-light-gray); }
 }
 .empty-cart-message {
   text-align: center;
-  color: var(--text-light-gray, #7b7b7b);
+  color: var(--text-light-gray);
   padding: 24px 0;
 }
 
 .side-panel-footer {
   padding: 16px;
-  border-top: 1px solid var(--border-color, #eee);
+  border-top: 1px solid var(--border-color);
   background: #fafafa;
 }
 
-/* --- lista de itens (renderCart) --- */
+/* --- CARRINHO --- */
 #cartItems { display: flex; flex-direction: column; gap: 10px; }
 #cartItems .ci {
   display: grid;
@@ -429,19 +433,23 @@ body.layout-checkout { background-color: var(--bg-light-gray); }
   gap: 8px;
   align-items: center;
   padding: 10px 0;
-  border-bottom: 1px solid var(--border-color, #eee);
+  border-bottom: 1px solid var(--border-color);
 }
-.ci-name { font-weight: 700; font-size: 13px; color: var(--text-dark, #222); }
-.ci-meta { font-size: 12px; color: var(--text-light-gray, #6b6b6b); }
+.ci-name { font-weight: 700; font-size: 13px; color: var(--text-dark); }
+.ci-meta { font-size: 12px; color: var(--text-light-gray); }
 .ci-remove {
   border: 0;
   background: none;
   font-size: 18px;
   line-height: 1;
   cursor: pointer;
-  color: var(--text-light-gray, #8a8a8a);
+  color: var(--text-light-gray);
 }
-.ci-remove:hover { color: var(--primary-orange, #f05a28); }
+.ci-remove:hover { color: var(--primary-orange); }
+.ci-itemQtyMinus, .ci-itemQtyPlus { border: none; font-size: 18px; color: var(--text-dark); background: none; cursor: pointer;}
+.ci-itemQtyMinus:hover, .ci-itemQtyPlus:hover {
+  color: var(--primary-orange);
+}
 
 /* --- totais --- */
 .cart-totals { display: flex; flex-direction: column; gap: 8px; }
@@ -450,7 +458,7 @@ body.layout-checkout { background-color: var(--bg-light-gray); }
   font-size: 1em;
 }
 .cart-totals .totals-row.total span:last-child {
-  font-size: 18px; font-weight: 800; color: var(--text-dark, #111);
+  font-size: 18px; font-weight: 800; color: var(--text-dark);
 }
 
 .toggle-password {

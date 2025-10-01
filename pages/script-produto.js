@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartItems = document.getElementById("cartItems");
   const emptyCartMessage = document.querySelector(".empty-cart-message");
 
-  // --------- ADICIONAR ITEM NA LISTA ---------
+  // --------- ADICIONAR ITEM NO CARRINHO ---------
   function renderCart() {
     if (!cartItems) return;
     
@@ -113,13 +113,13 @@ document.addEventListener("DOMContentLoaded", () => {
     cartItems.innerHTML = cart.map((product, itemIndex) => `
         <div class="ci" data-index="${itemIndex}">
           <span class="ci-name">${product.name}</span>
+          <button class="ci-itemQtyMinus">-</button>
+          <button class="ci-itemQtyPlus">+</button>
           <span class="ci-meta">
-            ${product.qty} × ${product.price.toLocaleString("pt-BR", {
-          style: "currency",
-          currency: "BRL",
-        })}
+            ${product.qty} × ${product.price.toLocaleString("pt-BR", { style: "currency", currency: "BRL",}
+          )}
           </span>
-          <button class="ci-remove" aria-label="Remover item">×</button>
+          <button class="ci-remove" aria-label="Remover item">X</button>
         </div>
       `).join("");
   }
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!removeButton) return;
 
       const itemRow = removeButton.closest(".ci");
-      const itemIndex = itemRow ? parseInt(itemRow.dataset.index, 10) : -1; // bate com data-index
+      const itemIndex = itemRow ? parseInt(itemRow.dataset.index, 10) : -1;
       if (itemIndex < 0) return;
 
       cart.splice(itemIndex, 1);
@@ -227,10 +227,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // -------- ALTERAR ITEM NO CARRINHO -------
+function alterItemQty() {
+  document.addEventListener("click", (alterEvent) => {
+    const btnMinus = alterEvent.target.closest(".ci-itemQtyMinus");
+    const btnPlus  = alterEvent.target.closest(".ci-itemQtyPlus");
+    if (!btnMinus && !btnPlus) return;
+
+    const itemRow = (btnMinus || btnPlus).closest(".ci");
+    const itemIndex = itemRow ? parseInt(itemRow.dataset.index, 10) : -1;
+    if (itemIndex < 0) return;
+
+    if (!btnPlus) {
+      cart[itemIndex].qty -= 1;
+      if (cart[itemIndex].qty <= 0) {
+        cart.splice(itemIndex, 1);
+      }
+    } else cart[itemIndex].qty += 1;
+    updateTotals();
+    renderCart();
+  });
+}
+
+// ------- APLICAR DESCONTO --------
+function applyDiscount() {
+  const discountInput = document.getElementById("discountCode");      // input
+  const discountBtn = document.querySelector(".discountButton");    // botão (nota: ponto na classe!)
+
+  function discountValue() {
+    const rawValue = (discountInput?.value || "").trim();
+    const value = parseInt(rawValue, 10);
+    totalDiscount += (value) > 0 ? value : 0;
+    updateTotals();
+  }
+
+  discountBtn?.addEventListener("click", discountValue);
+  discountInput?.addEventListener("keydown", (enter) => {
+    if (enter.key === "Enter") discountValue();
+  });
+}
+
   // INICIALIZAÇÃO
   updateTotals();
   renderCart();
   registerAddToCart();
   registerItemRemoval();
+  applyDiscount();
+  alterItemQty();
   CloseCart();
 });
