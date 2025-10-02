@@ -1,0 +1,186 @@
+/* ============================ */
+/* PÁGINA: LOGIN E CADASTRO     */
+/* ============================ */
+
+/* --- Layout Geral de Login --- */
+.layout-login {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--white);
+
+    .login-sidebar {
+        width: 320px;
+        flex-shrink: 0;
+        background-color: var(--bg-light-gray);
+        padding: 40px 30px;
+        height: 100vh;
+        overflow-y: auto;
+
+        .logo {
+            margin-bottom: 50px;
+            width: 100px;
+        }
+
+        .info-section {
+            margin-bottom: 30px;
+            h3 { font-size: 14px; margin-bottom: 15px; }
+            p, small { font-size: 13px; color: var(--text-light); line-height: 1.6; margin-bottom: 5px; }
+            .phone { font-weight: 700; color: var(--text-dark); margin-bottom: 15px; }
+        }
+    }
+
+    .login-main-content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+/* --- Conteúdo Específico do Login --- */
+.login-wrapper {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+
+    .login-title {
+        color: var(--primary-orange);
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .login-form-box {
+        background-color: var(--bg-light-gray);
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        text-align: left;
+    
+        .form-group input {
+            background-color: var(--bg-medium-gray);
+            border: none;
+            padding: 15px;
+        }
+    }
+
+    .form-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .social-login{
+        img{
+            width: 30px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    }
+    .app-download {
+        img{
+            width: 30px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+            
+        margin-top: 20px;
+        text-align: center;
+
+        .app-badges {
+            justify-content: center;
+        }
+    }
+}
+
+/* --- Layout Geral de Cadastro --- */
+.layout-register {
+    background-color: var(--bg-light-gray);
+
+    .register-main-content { padding: 50px 0; }
+}
+
+/* --- Conteúdo Específico do Cadastro --- */
+.registration-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+
+    .form-title {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .person-type-toggle {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid var(--border-color);
+
+        .toggle-option {
+            padding: 15px 10px;
+            color: var(--text-light);
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transform: translateY(1px); /* Alinha com a borda de baixo */
+            
+            &.active {
+                color: var(--primary-orange);
+                border-bottom-color: var(--primary-orange);
+            }
+        }
+    }
+    
+    .registration-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 20px; /* Remove o gap vertical, usa o do form-group */
+    }
+
+    .form-row {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .registration-form .form-group {
+        flex: 1; /* Faz os grupos de formulário dividirem o espaço */
+    }
+}
+
+/* --- Banner Promocional (Login) --- */
+.promo-banner {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-orange);
+    color: var(--white);
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    width: 260px;
+    z-index: 10;
+}

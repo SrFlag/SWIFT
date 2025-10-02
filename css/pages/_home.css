@@ -1,0 +1,98 @@
+/* ============================ */
+/* PÁGINA: HOME                 */
+/* ============================ */
+
+/* --- Barra Lateral de Categorias --- */
+/* (Apesar de aparecer em 'produtos', seu layout principal está na home) */
+.category-sidebar {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--white);
+    flex: 0 0 260px; /* Define uma largura base e impede que cresça ou encolha */
+    align-self: flex-start; /* Garante que a sidebar não estique verticalmente */
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-light-gray);
+        border-bottom: 1px solid var(--border-color);
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+            background-color: var(--bg-light-gray);
+            color: var(--primary-orange);
+        }
+    }
+
+    li:last-child a {
+        border-bottom: none;
+    }
+}
+
+/* --- Seção Hero (Banner Principal) --- */
+.hero-section {
+    background-color: var(--primary-orange);
+    color: var(--white);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300px;
+
+    /* Efeito de texto de fundo */
+    &::after {
+        content: 'PROMOÇÃO PROMOÇÃO';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 9em;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        line-height: 1.2;
+        z-index: 1;
+        user-select: none; /* Impede que o texto de fundo seja selecionado */
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+
+        .promo-badge {
+            display: inline-block;
+            border: 2px solid var(--white);
+            padding: 8px 15px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+    }
+    
+    .hero-image {
+        position: relative;
+        z-index: 2;
+        margin-left: 20px;
+
+        img {
+            max-width: 450px;
+        }
+    }
+}

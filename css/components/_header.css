@@ -1,0 +1,175 @@
+/* ============================ */
+/* COMPONENTE: CABEÇALHO        */
+/* ============================ */
+
+.site-header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+    /* O padding-top foi adicionado dinamicamente para compensar a top-bar fixa */
+    padding-top: 32px; 
+}
+
+/* --- 1. Barra do Topo (Fixa) --- */
+.top-bar {
+    background-color: var(--top-bar-bg);
+    color: var(--white);
+    font-size: 12px;
+    padding: 8px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .change-location {
+        background: none;
+        border: 1px solid var(--white);
+        color: var(--white);
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}
+
+/* --- 2. Cabeçalho Principal --- */
+.main-header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+}
+
+/* Navegação do Cabeçalho (Super Kits, Receitas) */
+.header-nav {
+    display: flex;
+    gap: 25px;
+
+    a {
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+        color: var(--text-dark);
+
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 11px;
+            color: var(--text-light-gray);
+        }
+    }
+}
+
+/* Barra de Busca */
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+
+    input {
+        width: 100%;
+        border: none;
+        padding: 12px;
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        background: none; /* Garante compatibilidade com tema escuro */
+        color: var(--text-dark);
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        border: none;
+        background: none;
+        padding: 0 15px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+}
+
+/* Ações do Usuário (Empresa, Perfil, Carrinho) */
+.user-actions {
+    display: flex;
+    gap: 20px;
+
+    .action-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 11px;
+        color: var(--text-dark);
+
+        span { /* Ícones */
+            font-size: 24px;
+        }
+
+        small {
+            display: block;
+            color: var(--text-light-gray);
+        }
+    }
+}
+
+/* --- 3. Barra de Informação de Frete --- */
+.shipping-info-bar {
+    background-color: var(--bg-light-gray);
+    font-size: 13px;
+    text-align: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* --- 4. Navegação Principal (Categorias) --- */
+.main-navigation {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--white);
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        color: var(--text-dark);
+
+        small {
+            display: block;
+            font-size: 12px;
+            color: var(--text-light-gray);
+        }
+    }
+}

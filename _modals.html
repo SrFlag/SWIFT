@@ -1,0 +1,76 @@
+<div class="side-panel-overlay" id="cartOverlay">
+    <div class="side-panel" id="cartPanel">
+        <div class="side-panel-header">
+            <h3><span>🛒</span> MEU CARRINHO</h3>
+            <button class="close-panel-btn" id="closeCartBtn">X</button>
+        </div>
+        <div class="side-panel-body">
+            <div id="cartItemsContainer">
+                </div>
+            <div class="empty-cart-message">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+        </div>
+        <div class="side-panel-footer">
+            <div class="discount-footer">
+                <input class="discountInput" type="text" id="discountCode" placeholder="Insira o cupom aqui...">
+                <button class="btn-primary discountButton" type="submit">APLICAR CUPOM</button>
+            </div>
+            <div class="cart-totals">
+                <div class="totals-row"><span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span></div>
+                <div class="totals-row"><span>Descontos</span><span id="cartDiscounts">R$ 0,00</span></div>
+                <div class="totals-row total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-full-width">FINALIZAR COMPRA</a>
+        </div>
+    </div>
+</div>
+
+<button class="chatbot-fab" id="openChatbotBtn" title="Abrir Suporte"><span>💬</span></button>
+<div class="chatbot-overlay" id="chatbotOverlay">
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <div class="chatbot-logo"><img src="assets/images/logo-swift.svg" alt="Swift Logo"></div>
+            <div class="chatbot-title">Chatbot Swift</div>
+            <button class="chatbot-close-btn" id="chatbotCloseBtn">X</button>
+        </div>
+        <div class="chatbot-body">
+            <div class="bot-status"><span>🤖</span> BOT Swift</div>
+            <div class="message-area">
+                <div class="chat-message bot-message">
+                    <div class="bot-avatar"></div>
+                    <div class="message-content">
+                        <p><strong>BOT Swift</strong></p>
+                        <p>Olá! 👋 Bem-vindo ao Assistente Virtual Swift Resolve! Estou aqui para te ajudar no que precisar💡.</p>
+                        <a href="#" class="privacy-link">Política de Privacidade.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <p>Nós resolvemos as suas preocupações?</p>
+            <div class="action-buttons">
+                <button class="btn-action">Sim</button>
+                <button class="btn-action btn-action-secondary">Não</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="addressModalOverlay">
+    <div class="modal-content">
+        <button class="modal-close-btn" id="closeAddressModalBtn">X</button>
+        <h2>Olá,</h2>
+        <h3>ESCOLHA UM ENDEREÇO</h3>
+        <p class="modal-subtitle">A SWIFT OFERECE DIFERENTES OPÇÕES DE FRETE E RETIRADA EM LOJA. VERIFIQUE A DISPONIBILIDADE EM SUA REGIÃO</p>
+        <div class="address-actions">
+            <button class="btn btn-secondary">USAR MINHA LOCALIZAÇÃO</button>
+            <span>OU</span>
+            <div class="cep-input-group">
+                <input type="text" placeholder="Digite seu CEP">
+                <button class="btn btn-primary">BUSCAR</button>
+            </div>
+        </div>
+        <p class="modal-disclaimer">Atenção! O preço dos produtos Swift e o frete do seu pedido podem variar de acordo com a região em que você está.</p>
+    </div>
+</div>

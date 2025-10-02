@@ -1,0 +1,58 @@
+/* ============================ */
+/* COMPONENTE: BOTÕES           */
+/* ============================ */
+
+.btn {
+    display: inline-block; /* Garante que o botão se comporte bem com outros elementos */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+/* --- Modificadores de Estilo --- */
+
+.btn-primary {
+    background-color: var(--primary-orange);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--light-orange);
+    }
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    border: 1px solid var(--primary-orange);
+    color: var(--primary-orange);
+
+    &:hover {
+        background-color: var(--primary-orange);
+        color: var(--white);
+    }
+}
+
+/* --- Modificadores de Tamanho/Layout --- */
+
+.btn-full-width {
+    width: 100%;
+}
+
+.btn-large {
+    padding: 18px 40px;
+    font-size: 16px;
+}
+
+/* --- Estado Desabilitado --- */
+
+button:disabled {
+    background-color: var(--bg-medium-gray);
+    border-color: var(--border-color);
+    color: var(--text-light);
+    cursor: not-allowed;
+}

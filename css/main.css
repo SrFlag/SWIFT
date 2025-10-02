@@ -1,0 +1,27 @@
+/* ==========================================================================
+   ARQUIVO MESTRE DE ESTILOS - SWIFT CLONE
+   Este arquivo importa todos os parciais de CSS na ordem correta.
+   Não adicione regras de CSS diretamente aqui.
+   ========================================================================== */
+
+/* --- 1. Camada de Base --- */
+@import url('base/_variables.css');
+@import url('base/_global.css');
+
+/* --- 2. Camada de Componentes --- */
+@import url('components/_buttons.css');
+@import url('components/_forms.css');
+@import url('components/_header.css');
+@import url('components/_footer.css');
+@import url('components/_cards.css');
+@import url('components/_side-panel.css');
+@import url('components/_modal.css');
+
+/* --- 3. Camada de Páginas --- */
+@import url('pages/_home.css');
+@import url('pages/_plp.css');
+@import url('pages/_pdp.css');
+@import url('pages/_receitas.css');
+@import url('pages/_perfil.css');
+@import url('pages/_cadastro-login.css');
+@import url('pages/_checkout.css');

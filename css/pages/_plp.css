@@ -1,0 +1,89 @@
+/* ============================ */
+/* PÁGINA: LISTAGEM DE PRODUTOS */
+/* ============================ */
+
+/* --- Barra Lateral de Filtros --- */
+.filter-sidebar {
+    flex: 0 0 240px; /* Largura fixa de 240px */
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    align-self: flex-start;
+
+    .filter-group {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h4 {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 10px;
+
+            small {
+                font-weight: 400;
+                color: var(--text-light-gray);
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .filter-option {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-light-gray);
+        padding: 6px 0;
+        transition: color 0.2s;
+
+        &:hover,
+        &.active {
+            color: var(--primary-orange);
+        }
+    }
+}
+
+/* --- Grade de Produtos --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    flex-grow: 1; /* Ocupa o espaço restante ao lado do filtro */
+}
+
+/* --- Paginação --- */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    width: 100%; /* Garante que a paginação fique dentro da área de conteúdo */
+
+    .page-number {
+        border: 1px solid var(--border-color);
+        color: var(--text-light-gray);
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 4px;
+
+        &:hover,
+        &.active {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            border-color: var(--primary-orange);
+        }
+    }
+}

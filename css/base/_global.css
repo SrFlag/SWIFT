@@ -1,0 +1,53 @@
+/* ============================ */
+/* RESET E PADRÕES GLOBAIS     */
+/* ============================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white); /* Padrão de fundo */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-orange);
+    font-weight: 600;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================ */
+/* CLASSES DE LAYOUT E HELPERS  */
+/* ============================ */
+.highlight {
+    color: var(--primary-orange);
+}
+
+body.layout-main {
+    background-color: var(--white);
+}
+
+body.bg-light {
+    background-color: var(--bg-light-gray);
+}
+
+.main-content-wrapper {
+    padding: 30px 0;
+}
+
+.main-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}

@@ -1,0 +1,42 @@
+:root {
+    /* Cores Principais */
+    --primary-orange: #F57921;
+    --light-orange: #FF9A4A;
+    --white: #FFFFFF;
+
+    /* Cores de Texto */
+    --text-dark: #333;
+    --text-light-gray: #555;
+    --text-light: #888;
+
+    /* Cores de Fundo e Bordas */
+    --bg-light-gray: #F7F7F7;
+    --bg-medium-gray: #EAEAEA;
+    --border-color: #E0E0E0;
+    
+    /* Cores de UI Específicas */
+    --top-bar-bg: #333;
+    --footer-bg: #2B2B2B;
+    --footer-text: #F0F0F0;
+}
+
+/* ============================ */
+/* VARIÁVEIS TEMA ESCURO   */
+/* ============================ */
+html[data-theme="dark"] {
+  /* Cores de Superfície */
+  --white: #0f1115;               
+  --bg-light-gray: #0b0f14;
+  --bg-medium-gray: #151a22;
+  --border-color: #2a3242;
+
+  /* Cores de Texto */
+  --text-dark: #e5e7eb;
+  --text-light-gray: #b3b9c6;
+  --text-light: #9aa3b2;
+
+  /* Cores de UI Específicas */
+  --top-bar-bg: #0b0f16;
+  --footer-bg: #0b0f16;
+  --footer-text: #e5e7eb;
+}

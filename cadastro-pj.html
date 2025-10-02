@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro PJ - Swift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://swift-static.online.pro.br/arquivos/favicon_package_2024/favicon-32x32.png" xmlns="http://www.w3.org/1999/xhtml">
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="layout-register">
+
+    <header class="site-header-simple">
+        <div class="container">
+            <a href="home.html">
+                <img src="assets/images/logo-swift.svg" alt="Swift Logo" class="logo"> </a>
+        </div>
+    </header>
+
+    <main class="register-main-content">
+        <div class="registration-container">
+            <h1 class="form-title">Cadastre-se</h1>
+            <div class="person-type-toggle">
+                <a href="cadastro-pf.html" class="toggle-option">Pessoa Física</a>
+                <a href="#" class="toggle-option active">Pessoa Jurídica</a>
+            </div>
+            <form class="registration-form">
+                <div class="form-group full-width"><label for="email">E-mail:</label><input type="email" id="email" placeholder="Digite aqui..."></div>
+                <div class="form-group full-width"><label for="razao-social">Razão Social *</label><input type="text" id="razao-social" placeholder="Digite aqui..."></div>
+                <div class="form-group full-width"><label for="nome-fantasia">Nome fantasia *</label><input type="text" id="nome-fantasia" placeholder="Digite aqui..."></div>
+                <div class="form-row">
+                    <div class="form-group"><label for="cnpj">CNPJ *</label><input type="text" id="cnpj" placeholder="xx.xxx.xxx/xxxx-xx"></div>
+                    <div class="form-group"><label for="ie">Inscrição Estadual *</label><input type="text" id="ie" placeholder="Digite aqui..."></div>
+                </div>
+                <div class="checkbox-group single-line-checkbox">
+                    <label for="ie-exempt"><input type="checkbox" id="ie-exempt"> Isento de Inscrição Estadual</label>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label for="contact-first-name">Primeiro Nome *</label><input type="text" id="contact-first-name" placeholder="Digite aqui..."></div>
+                    <div class="form-group"><label for="contact-last-name">Último Nome *</label><input type="text" id="contact-last-name" placeholder="Digite aqui..."></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label for="contact-cpf">CPF *</label><input type="text" id="contact-cpf" placeholder="xxx.xxx.xxx-xx"></div>
+                    <div class="form-group"><label for="contact-phone">Telefone celular *</label><input type="tel" id="contact-phone" placeholder="(xx) xxxxx-xxxx"></div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="password">Cadastre uma Senha *</label>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Digite aqui...">
+                        <span class="toggle-password">👁</span> </div>
+                    <small class="password-hint">A senha deve conter 8+ caracteres, incluindo 1 número, 1 maiúscula, 1 minúscula e 1 caractere especial.</small>
+                </div>
+                <div class="form-group full-width">
+                    <label for="password-confirm">Repetir Senha*</label>
+                    <div class="input-group">
+                        <input type="password" id="password-confirm" placeholder="Digite aqui...">
+                        <span class="toggle-password">👁</span> </div>
+                </div>
+                <div class="checkbox-section">
+                    <div class="checkbox-group">
+                        <label for="privacy-policy"><input type="checkbox" id="privacy-policy"> Li e aceito a <a href="#">Política de privacidade</a></label>
+                    </div>
+                    <div class="checkbox-group">
+                         <label for="communications"><input type="checkbox" id="communications"> Quero receber comunicações da Swift</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Cadastre-se</button>
+            </form>
+            <p class="login-link">Já tem cadastro? <a href="login.html">Faça login</a></p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
