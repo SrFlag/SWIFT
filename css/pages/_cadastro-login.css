@@ -78,6 +78,7 @@
 
     .form-actions {
         display: flex;
+        font-size: 15px;
         justify-content: space-between;
         align-items: center;
         margin-top: 30px;

@@ -42,6 +42,31 @@
         cursor: pointer;
         font-weight: 600;
     }
+    .backToTopButton {
+  background: none;
+  border: 0;
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+  z-index: 1001;
+}
+
+.backToTopButton:hover,
+.backToTopButton:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+
+.backToTopButtonText { color: inherit; } 
+#backToTop:hover { background-color: transparent; }
+
+
+.backToTopButtonText {
+    color: white;
+}
 }
 
 /* --- 2. Cabeçalho Principal --- */
