@@ -1,15 +1,9 @@
-/* ============================ */
-/* COMPONENTE: CABEÇALHO        */
-/* ============================ */
-
 .site-header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     background-color: var(--white);
-    /* O padding-top foi adicionado dinamicamente para compensar a top-bar fixa */
     padding-top: 32px; 
 }
 
-/* --- 1. Barra do Topo (Fixa) --- */
 .top-bar {
     background-color: var(--top-bar-bg);
     color: var(--white);
@@ -69,7 +63,6 @@
 }
 }
 
-/* --- 2. Cabeçalho Principal --- */
 .main-header {
     padding: 20px 0;
     border-bottom: 1px solid var(--border-color);
@@ -86,7 +79,6 @@
     }
 }
 
-/* Navegação do Cabeçalho (Super Kits, Receitas) */
 .header-nav {
     display: flex;
     gap: 25px;
@@ -106,7 +98,6 @@
     }
 }
 
-/* Barra de Busca */
 .search-bar {
     display: flex;
     flex-grow: 1;
@@ -119,7 +110,7 @@
         padding: 12px;
         font-size: 14px;
         font-family: 'Montserrat', sans-serif;
-        background: none; /* Garante compatibilidade com tema escuro */
+        background: none;
         color: var(--text-dark);
 
         &:focus {
@@ -136,7 +127,6 @@
     }
 }
 
-/* Ações do Usuário (Empresa, Perfil, Carrinho) */
 .user-actions {
     display: flex;
     gap: 20px;
@@ -148,7 +138,7 @@
         font-size: 11px;
         color: var(--text-dark);
 
-        span { /* Ícones */
+        span {
             font-size: 24px;
         }
 
@@ -159,7 +149,6 @@
     }
 }
 
-/* --- 3. Barra de Informação de Frete --- */
 .shipping-info-bar {
     background-color: var(--bg-light-gray);
     font-size: 13px;
@@ -173,7 +162,6 @@
     }
 }
 
-/* --- 4. Navegação Principal (Categorias) --- */
 .main-navigation {
     border-bottom: 1px solid var(--border-color);
     background-color: var(--white);

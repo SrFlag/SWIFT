@@ -1,8 +1,3 @@
-/* ============================ */
-/* COMPONENTE: CARDS            */
-/* ============================ */
-
-/* --- Card de Receita --- */
 .recipe-card {
     display: block;
     border: 1px solid var(--border-color);
@@ -66,7 +61,6 @@
 }
 
 
-/* --- Card de Produto --- */
 .product-card {
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -95,7 +89,7 @@
         font-size: 14px;
         font-weight: 600;
         margin-bottom: 10px;
-        flex-grow: 1; /* Faz o nome do produto ocupar o espaço disponível, alinhando os preços */
+        flex-grow: 1;
 
         a {
             color: var(--text-dark);

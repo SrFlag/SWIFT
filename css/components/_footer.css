@@ -1,7 +1,3 @@
-/* ============================ */
-/* COMPONENTE: RODAPÉ           */
-/* ============================ */
-
 .site-footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
@@ -9,28 +5,18 @@
     font-size: 13px;
 }
 
-/*
- * A regra principal para o layout em colunas.
- * O seletor '.site-footer .footer-grid' é específico
- * para garantir que ele vença qualquer outra regra genérica.
-*/
 .site-footer .footer-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 10px; /* Espaçamento vertical e horizontal entre as colunas */
+    gap: 20px 10px;
     justify-content: space-between;
     text-align: left;
 }
 
-/*
- * Regra para cada coluna individual.
- * 'flex: 1 1 160px' permite que a coluna cresça e encolha,
- * começando com uma largura base de 160px.
-*/
 .footer-column {
     flex: 1 1 160px;
     min-width: 160px;
-    padding: 0 15px; /* Espaçamento interno para o texto não colar nas bordas */
+    padding: 0 15px;
 }
 
 .footer-column h4 {
@@ -66,5 +52,5 @@
 }
 
 .app-badges img {
-    height: 40px; /* Ajustado para melhor visualização */
+    height: 40px;
 }

@@ -1,14 +1,5 @@
-/* ==========================================================================
-   SWIFT CLONE - SCRIPT PRINCIPAL (MAIN.JS)
-   Versão Final Refatorada e Corrigida
-   ========================================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    /**
-     * Módulo principal da aplicação.
-     * Orquestra o carregamento de componentes e a inicialização de outros módulos.
-     */
     const App = {
         async init() {
             console.log("APP: Iniciando aplicação...");
@@ -49,9 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    /**
+    /*
      * Módulo de Interface do Usuário (UI).
-     * Cuida de interações genéricas usando Delegação de Eventos.
      */
     const UI = {
         init() {
@@ -248,6 +238,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Inicia a aplicação
     App.init();
 });

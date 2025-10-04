@@ -1,9 +1,5 @@
-/* ============================ */
-/* COMPONENTE: BOTÕES           */
-/* ============================ */
-
 .btn {
-    display: inline-block; /* Garante que o botão se comporte bem com outros elementos */
+    display: inline-block;
     border: none;
     padding: 15px 30px;
     border-radius: 8px;
@@ -15,7 +11,6 @@
     text-align: center;
 }
 
-/* --- Modificadores de Estilo --- */
 
 .btn-primary {
     background-color: var(--primary-orange);
@@ -37,7 +32,6 @@
     }
 }
 
-/* --- Modificadores de Tamanho/Layout --- */
 
 .btn-full-width {
     width: 100%;
@@ -48,7 +42,6 @@
     font-size: 16px;
 }
 
-/* --- Estado Desabilitado --- */
 
 button:disabled {
     background-color: var(--bg-medium-gray);
